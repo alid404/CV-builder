@@ -1,0 +1,22 @@
+/* styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Tailwind Classes */
+.template-card {
+    @apply bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:scale-105 flex-shrink-0 w-[30vw] h-[40vh] mt-4;
+  }
+  
+  .template-card-content {
+    @apply relative bg-white rounded-lg overflow-hidden h-full;
+  }
+  
+  .template-image {
+    @apply w-full h-full object-cover;
+  }
+  
+  .template-button {
+    @apply absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[90%] bg-blue-500 text-white py-2 rounded-lg;
+  }
+  
