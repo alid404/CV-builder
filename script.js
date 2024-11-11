@@ -182,21 +182,54 @@ addExtraInfoButton.addEventListener('click', () => {
   addNewListItem('extraInfo', 'Additional information');
 });
 
-// Add new Reference
-addReferencesButton.addEventListener('click', () => {
-  addNewListItem('references', 'New reference - contact information');
-});
+function attachEventListeners() {
+  // List Item Buttons
+  Object.entries({
+      skills: 'New skill - proficiency level',
+      languages: 'New language - proficiency level',
+      social: 'Social Platform - link or username',
+      extraInfo: 'Additional information',
+      references: 'New reference - contact information'
+  }).forEach(([id, placeholder]) => {
+      const button = addButtons[id];
+      if (button) {
+          button.addEventListener('click', () => addListItem(id, placeholder));
+      }
+  });
 
-function addListItem(listId) {
-  const list = document.getElementById(listId);
-  const newItem = document.createElement("li");
-  newItem.contentEditable = "true";
-  newItem.textContent = "New item"; // Placeholder text for the new item
-  list.appendChild(newItem);
+  // Section Buttons
+  ['experience', 'education'].forEach(type => {
+      const button = addButtons[type];
+      if (button) {
+          button.addEventListener('click', () => addSection(type));
+      }
+  });
+
+  // Save Button
+  if (saveButton) {
+      saveButton.addEventListener('click', () => {
+          saveResume();
+          alert('Resume saved!');
+      });
+  }
 }
 
-document.getElementById("addSkillsBtn").addEventListener("click", () => addListItem("skills"));
-document.getElementById("addLanguagesBtn").addEventListener("click", () => addListItem("languages"));
-document.getElementById("addSocialBtn").addEventListener("click", () => addListItem("social"));
-document.getElementById("addExtraInfoBtn").addEventListener("click", () => addListItem("extraInfo"));
-document.getElementById("addReferencesBtn").addEventListener("click", () => addListItem("references"));
+// Save Resume Function
+function saveResume() {
+  const resumeData = {
+      name: document.getElementById('name')?.innerText || 'Your Name',
+      resumeName: document.getElementById('resumeName')?.innerText || 'Your Name',
+      jobTitle: document.getElementById('jobTitle')?.innerText || 'Job Title',
+      contactInfo: document.getElementById('contactInfo')?.innerText || 'Contact Info',
+      summary: document.getElementById('summary')?.innerText || 'Professional Summary',
+      skills: document.getElementById('skills')?.innerHTML || '',
+      languages: document.getElementById('languages')?.innerHTML || '',
+      social: document.getElementById('social')?.innerHTML || '',
+      extraInfo: document.getElementById('extraInfo')?.innerHTML || '',
+      references: document.getElementById('references')?.innerHTML || '',
+      experience: document.getElementById('experience1')?.innerHTML || '',
+      education: document.getElementById('education1')?.innerHTML || ''
+  };
+
+  localStorage.setItem('resumeData', JSON.stringify(resumeData));
+}
