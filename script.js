@@ -53,14 +53,68 @@ downloadButton.addEventListener('click', () => {
   html2pdf().from(resumeElement).set(options).save();
 });
 
-// Function to add new item to a list section
-function addNewListItem(containerId, placeholderText) {
-  const container = document.getElementById(containerId);
-  const newItem = document.createElement('li');
-  newItem.contentEditable = true;
-  newItem.innerText = placeholderText;
-  container.appendChild(newItem);
+// Dynamic Section Adder
+function addSection(type, selectorPrefix = '') {
+  const containers = {
+      experience: document.querySelector(`${selectorPrefix}#experience1`),
+      education: document.querySelector(`${selectorPrefix}#education1`)
+  };
+
+  const container = containers[type];
+  if (!container) return;
+
+  const newSection = document.createElement('div');
+  newSection.classList.add('mb-6', 'resume-section');
+
+  // Universal template-agnostic structure
+  const sectionTemplates = {
+      experience: `
+          <div class="section-header flex items-center justify-between">
+              <h3 class="section-title" contenteditable="true">Job Title at Company</h3>
+          </div>
+          <p class="section-date" contenteditable="true">Jan 2024 - Present | Location</p>
+          <ul class="section-details" contenteditable="true">
+              <li>Key responsibility or achievement</li>
+          </ul>
+      `,
+      education: `
+          <div class="section-header flex items-center justify-between">
+              <h3 class="section-title" contenteditable="true">Degree at Institution</h3>
+          </div>
+          <p class="section-date" contenteditable="true">Jan 2024 - Present | Location</p>
+          <p class="section-details" contenteditable="true">Additional details</p>
+      `
+  };
+
+  newSection.innerHTML = sectionTemplates[type];
+
+  // Add delete button
+  const headerSection = newSection.querySelector('.section-header');
+  const deleteButton = createDeleteButton(newSection);
+  headerSection.appendChild(deleteButton);
+
+  container.appendChild(newSection);
+  saveResume();
 }
+
+// Dynamic List Item Adder
+function addListItem(containerId, placeholderText) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  const newItem = document.createElement('li');
+  newItem.classList.add('flex', 'items-center', 'justify-between', 'group');
+
+  const content = document.createElement('span');
+  content.contentEditable = true;
+  content.innerText = placeholderText;
+
+  newItem.appendChild(content);
+  newItem.appendChild(createDeleteButton(newItem));
+
+  container.appendChild(newItem);
+  saveResume();
+}}
 
 // Universal Delete Button Creator
 function createDeleteButton(section) {
