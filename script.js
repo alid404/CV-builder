@@ -62,6 +62,24 @@ function addNewListItem(containerId, placeholderText) {
   container.appendChild(newItem);
 }
 
+// Universal Delete Button Creator
+function createDeleteButton(section) {
+  const deleteButton = document.createElement('span');
+  deleteButton.innerHTML = '✕';
+  deleteButton.classList.add(
+      'delete-btn', 
+      'text-red-500', 
+      'cursor-pointer', 
+      'ml-2', 
+      'hover:text-red-700'
+  );
+  deleteButton.addEventListener('click', () => {
+      section.remove();
+      saveResume();
+  });
+  return deleteButton;
+}
+
 // Add new Experience section
 addExperienceButton.addEventListener('click', () => {
   const experienceContainer = document.querySelector('.mb-8 #experience1');
