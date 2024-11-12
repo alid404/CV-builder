@@ -5,10 +5,7 @@ const addLanguagesButton = document.getElementById('addLanguagesBtn');
 const addSocialButton = document.getElementById('addSocialBtn');
 const addExtraInfoButton = document.getElementById('addExtraInfoBtn');
 const addReferencesButton = document.getElementById('addReferencesBtn');
-const addExperienceButton = document.getElementById('addExperienceButton');
-const addEducationButton = document.getElementById('addEducationButton');
 
-// Function to add delete buttons
 function addDeleteButton(section) {
   const deleteButton = document.createElement('span');
   deleteButton.innerHTML = '✕';
@@ -20,9 +17,8 @@ function addDeleteButton(section) {
   return deleteButton;
 }
 
-// Function to initialize editable titles
-function initializeEditableTitles(selectorPrefix = '') {
-  const titles = document.querySelectorAll(`${selectorPrefix}.section-title:not(.plus-btn)`);
+function initializeEditableTitles() {
+  const titles = document.querySelectorAll('.section-title:not(.plus-btn)');
   titles.forEach(title => {
     title.contentEditable = true;
     title.addEventListener('keydown', (e) => {
@@ -33,21 +29,20 @@ function initializeEditableTitles(selectorPrefix = '') {
     });
   });
 
-  const experiencePlusSign = document.querySelector(`${selectorPrefix}.experience-title .plus-sign`);
-  const educationPlusSign = document.querySelector(`${selectorPrefix}.education-title .plus-sign`);
+  const experiencePlusSign = document.querySelector('.experience-title .plus-sign');
+  const educationPlusSign = document.querySelector('.education-title .plus-sign');
 
   if (experiencePlusSign) {
-    experiencePlusSign.addEventListener('click', () => addExperienceSection(selectorPrefix));
+    experiencePlusSign.addEventListener('click', addExperienceSection);
   }
-
+  
   if (educationPlusSign) {
-    educationPlusSign.addEventListener('click', () => addEducationSection(selectorPrefix));
+    educationPlusSign.addEventListener('click', addEducationSection);
   }
 }
 
-// Function to add experience section
-function addExperienceSection(selectorPrefix = '') {
-  const experienceContainer = document.querySelector(`${selectorPrefix}#experience1`);
+function addExperienceSection() {
+  const experienceContainer = document.querySelector('#experience1');
   const newExperience = document.createElement('div');
   newExperience.classList.add('mb-6', 'relative', 'group');
   newExperience.innerHTML = `
@@ -66,9 +61,8 @@ function addExperienceSection(selectorPrefix = '') {
   experienceContainer.appendChild(newExperience);
 }
 
-// Function to add education section
-function addEducationSection(selectorPrefix = '') {
-  const educationContainer = document.querySelector(`${selectorPrefix}#education1`);
+function addEducationSection() {
+  const educationContainer = document.querySelector('#education1');
   const newEducation = document.createElement('div');
   newEducation.classList.add('mb-6', 'relative', 'group');
   newEducation.innerHTML = `
@@ -206,21 +200,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initializeDeleteButtons();
   }
-
-  if (addExperienceButton) {
-    addExperienceButton.addEventListener('click', () => addExperienceSection());
-  }
-
-  if (addEducationButton) {
-    addEducationButton.addEventListener('click', () => addEducationSection());
-  }
 });
 
 function initializeDeleteButtons() {
   document.querySelectorAll('#experience1 > div, #education1 > div').forEach(section => {
     if (!section.querySelector('.delete-btn')) {
-      const deleteButton = addDeleteButton(section);
-      section.querySelector('.flex').appendChild(deleteButton);
+      const header = section.querySelector('h4');
+      const wrapper = document.createElement('div');
+      wrapper.classList.add('flex', 'items-center', 'justify-between');
+      header.parentNode.insertBefore(wrapper, header);
+      wrapper.appendChild(header);
+      wrapper.appendChild(addDeleteButton(section));
     }
+  });
+
+  ['skills', 'languages', 'social', 'extraInfo', 'references'].forEach(sectionId => {
+    const items = document.querySelectorAll(`#${sectionId} > li`);
+    items.forEach(item => {
+      if (!item.querySelector('.delete-btn')) {
+        const content = item.innerHTML;
+        item.classList.add('flex', 'items-center', 'justify-between', 'group');
+        const span = document.createElement('span');
+        span.contentEditable = true;
+        span.innerHTML = content;
+        item.innerHTML = '';
+        item.appendChild(span);
+        item.appendChild(addDeleteButton(item));
+      }
+    });
   });
 }
