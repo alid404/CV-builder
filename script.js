@@ -204,3 +204,128 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 });
+
+function addExperienceSection(selectorPrefix = '') {
+  const experienceContainer = document.querySelector(`${selectorPrefix}#experience1`);
+  const newExperience = document.createElement('div');
+  newExperience.classList.add('mb-6');
+  newExperience.innerHTML = `
+      <h4 class="text-sm font-semibold" contenteditable="true">Job Title at Company</h4>
+      <p class="text-xs text-gray-500" contenteditable="true">Jan 2024 - Present | City, ST</p>
+      <ul class="list-disc pl-6 text-xs" contenteditable="true">
+          <li>Key achievements, tasks, and projects.</li>
+          <li>Important keywords taken from job advert.</li>
+      </ul>
+  `;
+
+  const deleteButton = createDeleteButton(newExperience);
+  const deleteContainer = document.createElement('span');
+  deleteContainer.classList.add('delete-container');
+  deleteContainer.appendChild(deleteButton);
+  
+  experienceContainer.appendChild(newExperience);
+  saveResume();
+}
+
+function addEducationSection(selectorPrefix = '') {
+  const educationContainer = document.querySelector(`${selectorPrefix}#education1`);
+  const newEducation = document.createElement('div');
+  newEducation.classList.add('mb-6');
+  newEducation.innerHTML = `
+      <h4 class="text-sm font-semibold" contenteditable="true">Degree Title at University Name</h4>
+      <p class="text-xs text-gray-500" contenteditable="true">Jan 2024 - Jan 2024 | City, ST</p>
+      <p class="text-xs" contenteditable="true">List of qualifications and relevant coursework.</p>
+  `;
+  const deleteButton = createDeleteButton(newEducation);
+  const deleteContainer = document.createElement('span');
+  deleteContainer.classList.add('delete-container');
+  deleteContainer.appendChild(deleteButton);
+  
+  educationContainer.appendChild(newEducation);
+  saveResume();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const experiencePlusSign = document.querySelector('.experience-title .plus-sign');
+  const educationPlusSign = document.querySelector('.education-title .plus-sign');
+
+  if (experiencePlusSign) {
+      experiencePlusSign.addEventListener('click', () => addExperienceSection());
+  }
+
+  if (educationPlusSign) {
+      educationPlusSign.addEventListener('click', () => addEducationSection());
+  }
+
+  ['experience1', 'education1'].forEach(sectionId => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+          section.querySelectorAll('> div').forEach(item => {
+              const existingDeleteBtn = item.querySelector('.delete-btn');
+              if (!existingDeleteBtn) {
+                  const deleteBtn = createDeleteButton(item);
+                  const deleteContainer = document.createElement('span');
+                  deleteContainer.classList.add('delete-container');
+                  deleteContainer.appendChild(deleteBtn);
+                  item.appendChild(deleteContainer);
+              }
+          });
+      }
+  });
+});
+
+//just for template 1//
+
+    document.getElementById('addSkillsBtn').addEventListener('click', function() {
+        const skillItem = document.createElement('li');
+        skillItem.className = "flex items-center justify-between bg-blue-100 text-blue-800 px-3 py-2 rounded-md text-sm font-medium transform transition duration-200 hover:bg-blue-200 hover:-translate-y-1";
+        skillItem.innerHTML = `${newSkill} <span class="text-gray-500 cursor-pointer font-semibold hover:text-red-500" onclick="this.parentElement.remove()">✕</span>`;
+        document.getElementById('skills').appendChild(skillItem);
+    });
+
+
+//just for template 4 //
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Add new experience
+    document.getElementById("addExperienceBtn").addEventListener("click", function () {
+        const experienceContainer = document.getElementById("experienceContainer");
+        const newExperience = document.createElement("div");
+        newExperience.classList.add("mb-6", "relative", "pl-4", "border-l-2", "border-gray-300");
+        newExperience.innerHTML = `
+            <div class="mb-2">
+                <div class="flex flex-col md:flex-row justify-between">
+                    <h3 class="text-xl font-bold" contenteditable="true">New Job Title</h3>
+                    <div class="text-gray-600" contenteditable="true">Company Name</div>
+                    <button class="deleteBtn text-red-500">✖</button>
+                </div>
+                <div class="text-gray-500" contenteditable="true">Dates</div>
+            </div>
+            <div class="text-gray-600" contenteditable="true">
+                <p class="mb-2">Description of role and responsibilities goes here.</p>
+            </div>
+        `;
+        experienceContainer.appendChild(newExperience);
+        newExperience.querySelector(".deleteBtn").addEventListener("click", function () {
+            newExperience.remove();
+        });
+    });
+
+    // Add new skill
+    document.querySelectorAll(".addSkillBtn").forEach(function (button) {
+        button.addEventListener("click", function (event) {
+            const container = event.target.closest("section").querySelector(".skillsContainer");
+            const newSkill = document.createElement("div");
+            newSkill.classList.add("flex", "justify-between", "mb-1");
+            newSkill.innerHTML = `
+                <span contenteditable="true">New Skill</span>
+                <span contenteditable="true">90%</span>
+                <button class="deleteBtn text-red-500">✖</button>
+            `;
+            container.appendChild(newSkill);
+            newSkill.querySelector(".deleteBtn").addEventListener("click", function () {
+                newSkill.remove();
+            });
+        });
+    });
+});

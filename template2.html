@@ -66,7 +66,8 @@
         <!-- Skills Section -->
         <div class="section pb-2 border-b-4 border-gray-300">
             <h2 class="text-xl font-bold text-gray-700">SKILLS</h2>
-            <ul id="skills" class="list-none">
+            <ul id="skills ```html
+" class="list-none">
                 <li class="mb-2">Microsoft Word - Expert</li>
                 <li class="mb-2">Microsoft PowerPoint - Advanced</li>
             </ul>
@@ -87,24 +88,28 @@
         <div class="section pb-2 border-b-4 border-gray-300">
             <h2 class="text-xl font-bold text-gray-700">EXPERIENCE</h2>
             <div id="experience1" class="mb-6">
-                <h3 class="text-lg font-semibold text-gray-700" contenteditable="true">Job Title at Company</h3>
-                <p class="text-md text-gray-600">Jan 2024 - Present | City, ST</p>
-                <ul class="list-none">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-lg font-semibold text-gray-700" contenteditable="true">Job Title at Company</h3>
+                    <span class="plus-sign text-blue-500 cursor-pointer" id="addExperienceButton">+</span>
+                </div>
+                <p class="text-md text-gray-600" contenteditable="true">Jan 2024 - Present | City, ST</p>
+                <ul class="list-none" contenteditable="true">
                     <li>Key achievements, tasks, and projects.</li>
                 </ul>
             </div>
-            <button id="addExperienceButton" class="plus-sign text-blue-500">+</button>
         </div>
 
         <!-- Education Section -->
         <div class="section pb-2 border-b-4 border-gray-300">
             <h2 class="text-xl font-bold text-gray-700">EDUCATION</h2>
             <div id="education1" class="mb-6">
-                <h3 class="text-lg font-semibold text-gray-700" contenteditable="true">Degree Title at University Name</h3>
-                <p class="text-md text-gray-600">Jan 2024 - Jan 2024 | City, ST</p>
-                <p>List of qualifications and relevant coursework.</p>
+                <div class="flex items-center justify-between">
+                    <h3 class="text-lg font-semibold text-gray-700" contenteditable="true">Degree Title at University Name</h3>
+                    <span class="plus-sign text-blue-500 cursor-pointer" id="addEducationButton">+</span>
+                </div>
+                <p class="text-md text-gray-600" contenteditable="true">Jan 2024 - Jan 2024 | City, ST</p>
+                <p contenteditable="true">List of qualifications and relevant coursework.</p>
             </div>
-            <button id="addEducationButton" class="plus-sign text-blue-500">+</button>
         </div>
 
         <!-- Extra Info Section -->

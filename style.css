@@ -19,4 +19,17 @@
   .template-button {
     @apply absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[90%] bg-blue-500 text-white py-2 rounded-lg;
   }
+
+  .plus-sign:hover {
+    color: green;
+    opacity: 0.7;
+  }
   
+  .plus-sign {
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .plus-sign:hover {
+    color: darkgreen !important;
+  }

@@ -1,226 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payton Webster - Professional Resume</title>
-    <link href="output.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.5">
+    <title>Resume Template 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="html2pdf.js/dist/html2pdf.bundle.min.js"></script>
 </head>
+
 <body class="bg-blue-100 min-h-screen">
-
-        <!-- Navbar with Editing Tools -->
-  <nav class="bg-blue-500 shadow-lg p-4 flex justify-between items-center">
-    <div class="flex items-center space-x-4">
-      <!-- Logo/Back to Home Link -->
-      <a href="index.html" class="text-xl font-semibold text-gray-800">CV Start</a>
-    </div>
-    <div class="flex space-x-4">
-      <!-- Editing Icons/Tools (Edit, Save, Download) -->
-      <button class="flex items-center p-2 hover:bg-gray-200 rounded">
-        <img src="assets/images/edit-icon.png" alt="Edit" class="w-5 h-5 mr-2">Edit
-      </button>
-      <button class="flex items-center p-2 hover:bg-gray-200 rounded">
-        <img src="assets/images/save-icon.png" alt="Save" class="w-5 h-5 mr-2">Save
-      </button>
-      <button class="flex items-center p-2 hover:bg-gray-200 rounded">
-        <img src="assets/images/download-icon.png" alt="Download" class="w-5 h-5 mr-2">Download
-      </button>
-    </div>
-  </nav>
-
-    <div class="max-w-5xl mx-auto p-8 bg-white shadow-lg my-8">
-        <!-- Header with accent border -->
-        <header class="relative mb-12 pb-6 border-b-2 border-blue-600">
-            <div class="flex justify-between items-start">
-                <div>
-                    <h1 class="text-4xl font-bold text-gray-800 mb-2">Payton Webster</h1>
-                    <p class="text-xl text-blue-600 font-semibold mb-3">Data Analyst | Data Visualization | SQL Expert</p>
-                    <div class="text-gray-600 space-x-6">
-                        <span class="inline-flex items-center">
-                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
-                            </svg>
-                            help@enhancv.com
-                        </span>
-                        <span class="inline-flex items-center">
-                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path>
-                            </svg>
-                            linkedin.com
-                        </span>
-                        <span class="inline-flex items-center">
-                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-                            </svg>
-                            Cleveland, OH
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <!-- Objective with left border accent -->
-        <section class="mb-10 pl-4 border-l-4 border-blue-600">
-            <h2 class="text-2xl font-bold mb-3 text-gray-800">OBJECTIVE</h2>
-            <p class="text-gray-700 leading-relaxed">Eager to apply my data analysis skills in a dynamic environment. Skilled in SQL, Python, and data visualization. Aspiring to contribute to data-driven decision-making processes and eager to develop further in data analytics.</p>
-        </section>
-
-        <!-- Experience -->
-        <section class="mb-10">
-            <h2 class="text-2xl font-bold mb-6 text-gray-800 pb-2 border-b-2 border-gray-200">EXPERIENCE</h2>
-            
-            <div class="mb-8">
-                <div class="flex justify-between items-center mb-2">
-                    <h3 class="text-xl font-bold text-gray-800">Data Analysis Intern</h3>
-                    <span class="text-blue-600 font-semibold">2023 - 2023</span>
-                </div>
-                <div class="flex justify-between mb-3">
-                    <span class="font-semibold text-gray-700">IBM</span>
-                    <span class="text-gray-600">Cleveland, OH</span>
-                </div>
-                <ul class="space-y-2 text-gray-700">
-                    <li class="flex items-start">
-                        <span class="text-blue-600 mr-2">•</span>
-                        Analyzed large datasets using SQL and Python, identifying key trends and patterns, which improved data-driven decision-making by 30%.
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-blue-600 mr-2">•</span>
-                        Developed and presented data visualizations using Tableau, resulting in enhanced stakeholder understanding of complex data sets.
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-blue-600 mr-2">•</span>
-                        Collaborated on a project to streamline data collection processes, reducing data processing time by 25%.
-                    </li>
-                </ul>
-            </div>
-
-            <div class="mb-8">
-                <div class="flex justify-between items-center mb-2">
-                    <h3 class="text-xl font-bold text-gray-800">Business Intelligence Intern</h3>
-                    <span class="text-blue-600 font-semibold">2023 - 2023</span>
-                </div>
-                <div class="flex justify-between mb-3">
-                    <span class="font-semibold text-gray-700">Accenture</span>
-                    <span class="text-gray-600">Cleveland, OH</span>
-                </div>
-                <ul class="space-y-2 text-gray-700">
-                    <li class="flex items-start">
-                        <span class="text-blue-600 mr-2">•</span>
-                        Assisted in the development of an automated reporting system using Python, which increased report generation efficiency by 40%.
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-blue-600 mr-2">•</span>
-                        Conducted in-depth data analysis to support business strategy development, contributing to a 15% increase in operational efficiency.
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-blue-600 mr-2">•</span>
-                        Participated in a team project to enhance data quality, achieving a 20% improvement in data accuracy.
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Two Column Layout -->
-        <div class="grid grid-cols-2 gap-12">
-            <!-- Left Column -->
-            <div>
-                <!-- Education -->
-                <section class="mb-8">
-                    <h2 class="text-2xl font-bold mb-4 text-gray-800 pb-2 border-b-2 border-gray-200">EDUCATION</h2>
-                    <h3 class="text-lg font-bold text-gray-800">Bachelor of Science in Data Science</h3>
-                    <div class="flex justify-between mb-1">
-                        <span class="font-semibold text-gray-700">Case Western Reserve University</span>
-                        <span class="text-blue-600">2019 - 2023</span>
-                    </div>
-                    <span class="text-gray-600">Cleveland, OH</span>
-                </section>
-
-                <!-- Skills -->
-                <section class="mb-8">
-                    <h2 class="text-2xl font-bold mb-4 text-gray-800 pb-2 border-b-2 border-gray-200">SKILLS</h2>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full font-medium">SQL</span>
-                        <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full font-medium">Python</span>
-                        <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full font-medium">Data Visualization</span>
-                        <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full font-medium">Tableau</span>
-                        <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full font-medium">Business Intelligence</span>
-                        <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full font-medium">Data Analysis</span>
-                        <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full font-medium">Report Generation</span>
-                        <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full font-medium">Data Management</span>
-                    </div>
-                </section>
-
-                <!-- Languages -->
-                <section class="mb-8">
-                    <h2 class="text-2xl font-bold mb-4 text-gray-800 pb-2 border-b-2 border-gray-200">LANGUAGES</h2>
-                    <div class="space-y-2">
-                        <div class="flex justify-between items-center">
-                            <span class="font-semibold text-gray-700">English</span>
-                            <span class="text-blue-600">Native</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="font-semibold text-gray-700">Spanish</span>
-                            <span class="text-blue-600">Advanced</span>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <!-- Right Column -->
-            <div>
-                <!-- Strengths -->
-                <section class="mb-8">
-                    <h2 class="text-2xl font-bold mb-4 text-gray-800 pb-2 border-b-2 border-gray-200">STRENGTHS</h2>
-                    <div class="space-y-4">
-                        <div>
-                            <h3 class="font-bold text-gray-800 mb-1">Analytical Thinking</h3>
-                            <p class="text-gray-700">Proven ability to analyze complex datasets, as demonstrated during my internship at IBM, leading to actionable insights.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-gray-800 mb-1">Effective Communication</h3>
-                            <p class="text-gray-700">Skilled in presenting complex data in an understandable format, evidenced by positive feedback from Accenture team leads.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-gray-800 mb-1">Team Collaboration</h3>
-                            <p class="text-gray-700">Excelled in team projects, contributing to a 20% improvement in data quality at Accenture through effective collaboration.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Certifications -->
-                <section class="mb-8">
-                    <h2 class="text-2xl font-bold mb-4 text-gray-800 pb-2 border-b-2 border-gray-200">CERTIFICATIONS</h2>
-                    <div class="space-y-4">
-                        <div>
-                            <h3 class="font-bold text-gray-800 mb-1">Advanced SQL for Data Analysis</h3>
-                            <p class="text-gray-700">An in-depth course on SQL provided by Coursera, focusing on complex queries and data manipulation.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-gray-800 mb-1">Tableau 10 A-Z: Hands-On Tableau Training</h3>
-                            <p class="text-gray-700">Comprehensive Tableau training by Udemy, covering data visualization, dashboard creation, and data analysis.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Passions -->
-                <section class="mb-8">
-                    <h2 class="text-2xl font-bold mb-4 text-gray-800 pb-2 border-b-2 border-gray-200">PASSIONS</h2>
-                    <div class="space-y-4">
-                        <div>
-                            <h3 class="font-bold text-gray-800 mb-1">Data-Driven Storytelling</h3>
-                            <p class="text-gray-700">Passionate about transforming data into compelling stories that drive decision-making and strategy.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-gray-800 mb-1">Continuous Learning</h3>
-                            <p class="text-gray-700">Committed to continually enhancing my data analysis skills through courses, workshops, and self-study.</p>
-                        </div>
-                    </div>
-                </section>
-            </div>
+    <!-- Navbar -->
+    <nav class="bg-blue-500 shadow-lg p-4 flex justify-between items-center">
+        <a href="index.html" class="text-xl font-semibold text-white">CV Start</a>
+        <div class="flex space-x-4">
+            <button id="saveButton" class="flex items-center p-2 text-white hover:bg-blue-600 rounded">
+                <img src="assets/images/save-icon.png" alt="Save" class="w-5 h-5 mr-2">Save
+            </button>
+            <button id="downloadButton" class="flex items-center p-2 text-white hover:bg-blue-600 rounded">
+                <img src="assets/images/download-icon.png" alt="Download" class="w-5 h-5 mr-2">Download
+            </button>
         </div>
-    </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="flex justify-center py-10">
+        <div class="max-w-5xl mx-auto p-8 bg-white shadow-lg rounded-lg">
+            <!-- Profile Header -->
+            <div class="text-center mb-12 border-b-2 border-blue-600 pb-6">
+                <div class="bg-blue-50 rounded-full w-32 h-32 mx-auto flex items-center justify-center mb-8">
+                    <span class="text-4xl font-bold text-blue-600">YN</span>
+                </div>
+                <h2 id="name" class="text-2xl font-bold text-gray-800 mb-2" contenteditable="true">YOUR NAME</h2>
+                <div class="text-gray-600 mt-2">
+                    <span id="contactInfo" contenteditable="true">123 Your Street, Your City, ST 1235</span><br>
+                    <span>(123) 456-7890 | yourname@email.com</span>
+                </div>
+            </div>
+
+            <!-- Summary Section -->
+            <div class="mb-10 pl-4 border-l-4 border-blue-600 text-center">
+                <h3 id="summary" class="text-xl font-bold mb-3 text-gray-800" contenteditable="true">SUMMARY</h3>
+                <p contenteditable="true" class="text-gray-700">Brief summary of experience, qualifications, and skills.
+                    This should be a few lines long and provide an overview of your professional background.</p>
+            </div>
+
+            <!-- Two Columns Section -->
+            <div class="grid grid-cols-2 gap-12">
+                <!-- Left Column: Experience, Education -->
+                <div>
+                    <!-- Experience Section -->
+                    <div class="mb-10">
+                        <h3 id="experience" class="text-xl font-bold mb-6 text-gray-800 border-b-2 border-gray-200"
+                            contenteditable="true">EXPERIENCE</h3>
+                        <div id="experience1" class="mb-8">
+                            <div class="flex justify-between items-center mb-3">
+                                <h4 class="font-bold text-gray-800" contenteditable="true">Job Title at Company</h4>
+                            </div>
+                            <div class="flex justify-between mb-3">
+                                <span class="font-semibold text-gray-700" contenteditable="true">Company Name</span>
+                                <span class="text-blue-600" contenteditable="true">Jan 2024 - Present | City, ST</span>
+                            </div>
+                            <ul class="list-disc pl-6 text-gray-600">
+                                <li contenteditable="true">Key achievements, tasks, and projects.</li>
+                                <li contenteditable="true">Important keywords taken from job advert.</li>
+                            </ul>
+                        </div>
+                        <button id="addExperienceButton" class="text-green-500 font-semibold">Add Experience +</button>
+                    </div>
+
+                    <!-- Education Section -->
+                    <div class="mb-8">
+                        <h3 id="education" class="text-xl font-bold mb-4 text-gray-800 border-b-2 border-gray-200"
+                            contenteditable="true">EDUCATION</h3>
+                        <div id="education1" class="mb-8">
+                            <h4 class="font-bold text-gray-800" contenteditable="true">Degree Title at University Name
+                            </h4>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-semibold text-gray-700" contenteditable="true">University Name</span>
+                                <span class="text-blue-600" contenteditable="true">Jan 2024 - Jan 2024</span>
+                            </div>
+                            <span class="text-gray-600" contenteditable="true">City, ST</span>
+                        </div>
+                        <button id="addEducationButton" class="text-green-500 font-semibold">Add Education +</button>
+                    </div>
+                </div>
+
+                <!-- Right Column:Skills, Languages -->
+                <div>
+                    <!-- Skills Section -->
+                    <div class="mb-8">
+                        <h3 id="skillsTitle" class="text-xl font-bold mb-4 text-gray-800 border-b-2 border-gray-200"
+                            contenteditable="true">SKILLS</h3>
+                        <ul class="flex flex-col gap-2" id="skills">
+                            <li class="flex justify-between items-center bg-blue-50 text-blue-600 rounded-full px-3 py-1 font-medium"
+                                contenteditable="true">
+                                Microsoft Word - Expert
+                                <span class="delete-btn text-red-500 cursor-pointer ml-2">✕</span>
+                            </li>
+                            <li class="flex justify-between items-center bg-blue-50 text-blue-600 rounded-full px-3 py-1 font-medium"
+                                contenteditable="true">
+                                Microsoft PowerPoint - Advanced
+                                <span class="delete-btn text-red-500 cursor-pointer ml-2">✕</span>
+                            </li>
+                        </ul>
+                        <button id="addSkillsBtn" class="text-green-500 font-semibold mt-2">Add Skill +</button>
+                    </div>
+
+                    <!-- Languages Section -->
+                    <div class="mb-8">
+                        <h3 id="languagesTitle" class="text-xl font-bold mb-4 text-gray-800 border-b-2 border-gray-200"
+                            contenteditable="true">LANGUAGES</h3>
+                        <ul class="space-y-2" id="languages">
+                            <li class="flex justify-between items-center">
+                                <span class="font-semibold text-gray-700" contenteditable="true">Spanish</span>
+                                <span class="text-blue-600" contenteditable="true">Fluent</span>
+                                <span class="delete-btn text-red-500 cursor-pointer ml-2">✕</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="font-semibold text-gray-700" contenteditable="true">Mandarin Chinese</span>
+                                <span class="text-blue-600" contenteditable="true">Proficient</span>
+                                <span class="delete-btn text-red-500 cursor-pointer ml-2">✕</span>
+                            </li>
+                        </ul>
+                        <button id="addLanguagesBtn" class="text-green-500 font-semibold mt-2">Add Language +</button>
+                    </div>
+
+                    <!-- Additional Information Sections (Extra Info, References) -->
+                    <div class="mb-8">
+                        <h3 id="extra-info" class="text-xl font-bold mb-4 text-gray-800 border-b-2 border-gray-200"
+                            contenteditable="true">EXTRA INFO</h3>
+                        <p contenteditable="true" class="text-gray-700">Extra info can include anything relevant that's
+                            not already covered.</p>
+                    </div>
+                    <div class="mb-8">
+                        <h3 id="references" class="text-xl font-bold mb-4 text-gray-800 border-b-2 border-gray-200"
+                            contenteditable="true">REFERENCES</h3>
+                        <p contenteditable="true" class="text-gray-700">Available on request.</p>
+                    </div>
+                </div>
+            </div>
+
+            <script src="script.js"></script>
 </body>
 
-<script src="script.js"></script>
 </html>
