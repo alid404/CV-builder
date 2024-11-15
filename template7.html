@@ -3,69 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payton Webster - Professional Resume</title>
+    <title>Resume Template 1</title>
     <link href="output.css" rel="stylesheet">
 </head>
+
 <body class="bg-blue-100 min-h-screen">
-
-          <!-- Navbar with Editing Tools -->
-  <nav class="bg-blue-500 shadow-lg p-4 flex justify-between items-center">
-    <div class="flex items-center space-x-4">
-      <!-- Logo/Back to Home Link -->
-      <a href="index.html" class="text-xl font-semibold text-gray-800">CV Start</a>
-    </div>
-    <div class="flex space-x-4">
-      <!-- Editing Icons/Tools (Edit, Save, Download) -->
-      <button class="flex items-center p-2 hover:bg-gray-200 rounded">
-        <img src="assets/images/edit-icon.png" alt="Edit" class="w-5 h-5 mr-2">Edit
-      </button>
-      <button class="flex items-center p-2 hover:bg-gray-200 rounded">
-        <img src="assets/images/save-icon.png" alt="Save" class="w-5 h-5 mr-2">Save
-      </button>
-      <button class="flex items-center p-2 hover:bg-gray-200 rounded">
-        <img src="assets/images/download-icon.png" alt="Download" class="w-5 h-5 mr-2">Download
-      </button>
-    </div>
-  </nav>
-
+    <nav class="bg-blue-500 shadow-lg p-4 flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+            <a href="index.html" class="text-xl font-semibold text-gray-800">CV Start</a>
+        </div>
+        <div class="flex space-x-4">
+            <button id="saveButton" class="flex items-center p-2 hover:bg-gray-200 rounded">
+                <img src="assets/images/save-icon.png" alt="Save" class="w-5 h-5 mr-2">Save
+            </button>
+            <button id="downloadButton" class="flex items-center p-2 hover:bg-gray-200 rounded">
+                <img src="assets/images/download-icon.png" alt="Download" class="w-5 h-5 mr-2">Download
+            </button>
+        </div>
+    </nav>
 
     <!-- Main Container -->
-    <div class="max-w-6xl mx-auto my-8 bg-white shadow-2xl">
+    <main class="max-w-6xl mx-auto my-8 bg-white shadow-2xl rounded-lg overflow-hidden">
         <!-- Header Section with Gradient -->
         <div class="relative bg-gradient-to-r from-purple-900 to-indigo-800 p-12 text-white">
             <div class="max-w-4xl">
-                <h1 class="text-5xl font-bold mb-3">Payton Webster</h1>
-                <p class="text-xl font-light mb-6">Data Analyst | Data Visualization | SQL Expert</p>
-                <div class="flex space-x-6 text-purple-200">
+                <h1 id="name" class="text-5xl font-bold mb-3" contenteditable="true">YOUR NAME</h1>
+                <p id="jobTitle" class="text-xl font-light mb-6" contenteditable="true">Job Title</p>
+                <div id="contactInfo" class="flex space-x-6 text-purple-200">
                     <div class="flex items-center space-x-2">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
                         </svg>
-                        <span>help@enhancv.com</span>
+                        <span contenteditable="true">yourname@email.com</span>
                     </div>
                     <div class="flex items-center space-x-2">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-                            <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"></path>
+                            <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                            <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"/>
                         </svg>
-                        <span>linkedin.com</span>
+                        <span contenteditable="true">linkedin.com/in/yourname</span>
                     </div>
                     <div class="flex items-center space-x-2">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
                         </svg>
-                        <span>Cleveland, OH</span>
+                        <span contenteditable="true">Your City, ST</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Main Content Grid -->
+        <!-- Content Grid -->
         <div class="grid grid-cols-12 gap-8 p-12">
-            <!-- Left Column -->
+            <!-- Main Content -->
             <div class="col-span-8 space-y-12">
-                <!-- Objective -->
+                <!-- Summary Section -->
                 <section>
                     <div class="flex items-center mb-6">
                         <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mr-4">
@@ -73,12 +66,12 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                             </svg>
                         </div>
-                        <h2 class="text-2xl font-bold text-gray-800">OBJECTIVE</h2>
+                        <h2 class="text-2xl font-bold text-gray-800">SUMMARY</h2>
                     </div>
-                    <p class="text-gray-600 leading-relaxed pl-16">Eager to apply my data analysis skills in a dynamic environment. Skilled in SQL, Python, and data visualization. Aspiring to contribute to data-driven decision-making processes and eager to develop further in data analytics.</p>
+                    <p id="summary" class="text-gray-600 leading-relaxed pl-16" contenteditable="true">Brief summary of experience, qualifications, and skills. This should be a few lines long and give an overview of your professional capabilities.</p>
                 </section>
 
-                <!-- Experience -->
+                <!-- Experience Section -->
                 <section>
                     <div class="flex items-center mb-8">
                         <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mr-4">
@@ -87,55 +80,64 @@
                             </svg>
                         </div>
                         <h2 class="text-2xl font-bold text-gray-800">EXPERIENCE</h2>
+                        <button id="addExperienceButton" class="ml-4 p-2 text-purple-600 hover:text-purple-800">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                            </svg>
+                        </button>
                     </div>
 
-                    <div class="space-y-8 pl-16">
+                    <div id="experience1" class="space-y-8 pl-16">
                         <div class="relative pb-8 border-l-2 border-purple-200 pl-8">
                             <div class="absolute -left-2 top-0 w-6 h-6 bg-purple-600 rounded-full"></div>
                             <div class="mb-4">
                                 <div class="flex justify-between items-center mb-2">
-                                    <h3 class="text-xl font-bold text-gray-800">Data Analysis Intern</h3>
-                                    <span class="text-purple-600 font-semibold">2023</span>
+                                    <h3 class="text-xl font-bold text-gray-800" contenteditable="true">Job Title at Company</h3>
+                                    <span class="text-purple-600 font-semibold" contenteditable="true">Jan 2024 - Present</span>
                                 </div>
-                                <p class="text-gray-600 mb-4">IBM • Cleveland, OH</p>
-                                <ul class="space-y-2 text-gray-600">
-                                    <li class="flex items-start">
-                                        <span class="text-purple-600 mr-2">•</span>
-                                        Analyzed large datasets using SQL and Python, improving decision-making by 30%
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-purple-600 mr-2">•</span>
-                                        Developed Tableau visualizations for enhanced stakeholder understanding
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-purple-600 mr-2">•</span>
-                                        Reduced data processing time by 25% through process optimization
-                                    </li>
+                                <p class="text-gray-600 mb-4" contenteditable="true">City, ST</p>
+                                <ul class="space-y-2 text-gray-600 list-disc pl-5" contenteditable="true">
+                                    <li>Key achievements, tasks, and projects.</li>
+                                    <li>Important keywords taken from job advert.</li>
                                 </ul>
                             </div>
                         </div>
+                    </div>
+                </section>
 
+                <!-- Education Section -->
+                <section>
+                    <div class="flex items-center mb-8">
+                        <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14v7"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">EDUCATION</h2>
+                        <button id="addEducationButton" class="ml-4 p-2 text-purple-600 hover:text-purple-800">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div id="education1" class="space-y-8 pl-16">
                         <div class="relative pb-8 border-l-2 border-purple-200 pl-8">
                             <div class="absolute -left-2 top-0 w-6 h-6 bg-purple-600 rounded-full"></div>
-                            <div>
+                            <div class="mb-4">
                                 <div class="flex justify-between items-center mb-2">
-                                    <h3 class="text-xl font-bold text-gray-800">Business Intelligence Intern</h3>
-                                    <span class="text-purple-600 font-semibold">2023</span>
+                                    <h3 class="text-xl font-bold text-gray-800" contenteditable="true">Degree Name</h3>
+                                    <span class="text-purple-600 font-semibold" contenteditable="true">2020 - 2024</span>
                                 </div>
-                                <p class="text-gray-600 mb-4">Accenture • Cleveland, OH</p>
-                                <ul class="space-y-2 text-gray-600">
-                                    <li class="flex items-start">
-                                        <span class="text-purple-600 mr-2">•</span>
-                                        Increased report generation efficiency by 40% through automation
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-purple-600 mr-2">•</span>
-                                        Improved operational efficiency by 15% through data analysis
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-purple-600 mr-2">•</span>
-                                        Enhanced data quality by 20% through team collaboration
-                                    </li>
+                                <p class="text-gray-600 mb-2" contenteditable="true">University Name</p>
+                                <p class="text-gray-600 mb-4" contenteditable="true">City, ST</p>
+                                <ul class="space-y-2 text-gray-600 list-disc pl-5" contenteditable="true">
+                                    <li>Major: Your Major</li>
+                                    <li>GPA: X.XX</li>
+                                    <li>Relevant Coursework: Course 1, Course 2, Course 3</li>
+                                    <li>Academic Achievements and Honors</li>
                                 </ul>
                             </div>
                         </div>
@@ -143,9 +145,9 @@
                 </section>
             </div>
 
-            <!-- Right Column -->
+            <!-- Sidebar -->
             <div class="col-span-4 space-y-8">
-                <!-- Skills -->
+                <!-- Skills Section -->
                 <section class="bg-gray-50 p-6 rounded-lg">
                     <div class="flex items-center mb-6">
                         <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4">
@@ -154,103 +156,51 @@
                             </svg>
                         </div>
                         <h2 class="text-xl font-bold text-gray-800">SKILLS</h2>
+                        <button id="addSkillsBtn" class="ml-4 p-2 text-purple-600 hover:text-purple-800">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                            </svg>
+                        </button>
                     </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">SQL</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Python</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Data Visualization</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Tableau</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">BI</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Analysis</span>
-                    </div>
+                    <ul id="skills" class="space-y-3 text-gray-600">
+                        <li contenteditable="true">Microsoft Word - Expert</li>
+                        <li contenteditable="true">Microsoft PowerPoint - Advanced</li>
+                    </ul>
                 </section>
 
-                <!-- Education -->
+                <!-- Languages Section -->
                 <section class="bg-gray-50 p-6 rounded-lg">
                     <div class="flex items-center mb-6">
                         <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4">
                             <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 14l9-5-9-5-9 5 9 5z"/>
-                                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
                             </svg>
                         </div>
-                        <h2 class="text-xl font-bold text-gray-800">EDUCATION</h2>
+                        <h2 class="text-xl font-bold text-gray-800">LANGUAGES</h2>
+                        <button id="addLanguagesBtn" class="ml-4 p-2 text-purple-600 hover:text-purple-800">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                            </svg>
+                        </button>
                     </div>
-                    <div>
-                        <h3 class="font-bold text-gray-800 mb-1">Bachelor of Science in Data Science</h3>
-                        <p class="text-gray-600 mb-1">Case Western Reserve University</p>
-                        <p class="text-purple-600 font-medium">2019 - 2023</p>
-                    </div>
+                    <ul id="languages" class="space-y-3 text-gray-600">
+                        <li contenteditable="true">Spanish - Fluent</li>
+                        <li contenteditable="true">Mandarin Chinese - Proficient</li>
+                    </ul>
                 </section>
 
-                <!-- Languages -->
-                <section class="bg-gray-50 p-6 rounded-lg">
-                    <div class="flex items-center mb-6">
-                        <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4">
-                            <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5"/>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/>
-                        </svg>
-                    </div>
-                    <h2 class="text-xl font-bold text-gray-800">LANGUAGES</h2>
-                </div>
-                <div class="space-y-4">
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="text-gray-700 font-medium">English</span>
-                            <span class="text-purple-600">Native</span>
-                        </div>
-                        <div class="w-full bg-purple-100 rounded-full h-2">
-                            <div class="bg-purple-600 h-2 rounded-full" style="width: 100%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="text-gray-700 font-medium">Spanish</span>
-                            <span class="text-purple-600">Intermediate</span>
-                        </div>
-                        <div class="w-full bg-purple-100 rounded-full h-2">
-                            <div class="bg-purple-600 h-2 rounded-full" style="width: 60%"></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Certifications -->
-            <section class="bg-gray-50 p-6 rounded-lg">
-                <div class="flex items-center mb-6">
-                    <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4">
-                        <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
-                        </svg>
-                    </div>
-                    <h2 class="text-xl font-bold text-gray-800">CERTIFICATIONS</h2>
-                </div>
-                <ul class="space-y-3">
-                    <li class="flex items-center space-x-3">
-                        <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <span class="text-gray-600">Google Data Analytics Professional Certificate</span>
-                    </li>
-                    <li class="flex items-center space-x-3">
-                        <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <span class="text-gray-600">IBM Data Science Professional Certificate</span>
-                    </li>
-                </ul>
-            </section>
+                <!-- Hidden elements for JS functionality -->
+                <div id="social" class="hidden"></div>
+                <div id="extraInfo" class="hidden"></div>
+                <div id="references" class="hidden"></div>
+                <div id="education1" class="hidden"></div>
+            </div>
         </div>
     </div>
-</div>
 
-    <!-- Footer -->
-    <footer class="text-center py-8 text-gray-500 text-sm">
-        <p>© 2024 Payton Webster. All rights reserved.</p>
-    </footer>
+        <!-- JavaScript File -->
+        <script src="script.js"></script>
+        <script src="jspdf.umd.min.js"></script>
+        <script src="html2pdf.bundle.min.js"></script>
 </body>
-
-<script src="script.js"></script>
 </html>

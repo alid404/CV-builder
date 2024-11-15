@@ -10,21 +10,22 @@
 </head>
 
 <body class="bg-blue-100 min-h-screen">
-    <!-- Navbar -->
     <nav class="bg-blue-500 shadow-lg p-4 flex justify-between items-center">
-        <a href="index.html" class="text-xl font-semibold text-white">CV Start</a>
+        <div class="flex items-center space-x-4">
+            <a href="index.html" class="text-xl font-semibold text-gray-800">CV Start</a>
+        </div>
         <div class="flex space-x-4">
-            <button id="saveButton" class="flex items-center p-2 text-white hover:bg-blue-600 rounded">
+            <button id="saveButton" class="flex items-center p-2 hover:bg-gray-200 rounded">
                 <img src="assets/images/save-icon.png" alt="Save" class="w-5 h-5 mr-2">Save
             </button>
-            <button id="downloadButton" class="flex items-center p-2 text-white hover:bg-blue-600 rounded">
+            <button id="downloadButton" class="flex items-center p-2 hover:bg-gray-200 rounded">
                 <img src="assets/images/download-icon.png" alt="Download" class="w-5 h-5 mr-2">Download
             </button>
         </div>
     </nav>
 
     <!-- Main Container -->
-    <div class="flex justify-center py-10">
+    <main class="flex justify-center py-10">
         <div class="max-w-5xl mx-auto p-8 bg-white shadow-lg rounded-lg">
             <!-- Profile Header -->
             <div class="text-center mb-12 border-b-2 border-blue-600 pb-6">
@@ -139,9 +140,11 @@
                         <p contenteditable="true" class="text-gray-700">Available on request.</p>
                     </div>
                 </div>
-            </div>
-
-            <script src="script.js"></script>
+            </div>           
+            <!-- JavaScript File -->
+    <script src="script.js"></script>
+    <script src="jspdf.umd.min.js"></script>
+    <script src="html2pdf.bundle.min.js"></script>
 </body>
 
 </html>

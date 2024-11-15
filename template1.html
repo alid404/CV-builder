@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Template 1</title>
     <link href="output.css" rel="stylesheet">
-    <script src="html2pdf.js/dist/html2pdf.bundle.min.js"></script>
 </head>
 <body class="bg-blue-100 min-h-screen">
     <nav class="bg-blue-500 shadow-lg p-4 flex justify-between items-center">
@@ -22,14 +21,16 @@
         </div>
     </nav>
 
-    <div class="flex justify-center bg-gray-100 py-10">
-        <div class="w-[80vw] md:w-[70vw] lg:w-[65vw] xl:w-[50vw] max-w-screen-lg flex bg-white shadow-lg rounded-lg overflow-hidden min-h-[150vh]">
+    <main class="flex justify-center bg-gray-100 py-10">
+        <div class="w-[95vw] md:w-[85vw] lg:w-[75vw] xl:w-[65vw] max-w-screen-lg bg-white shadow-lg rounded-lg flex flex-col lg:flex-row overflow-hidden">
             <!-- Left Sidebar -->
-            <div class="bg-gray-800 text-white p-8 w-1/3">
+            <div class="bg-gray-800 text-white p-8 w-full lg:w-1/3">
                 <div class="text-center mb-8">
-                    <div class="bg-gray-500 rounded-full w-32 h-32 mx-auto flex items-center justify-center">
-                        <span class="text-4xl font-bold">YN</span>
+                    <div class="bg-gray-500 rounded-full w-32 h-32 mx-auto flex items-center justify-center overflow-hidden relative">
+                        <img id="uploaded-image" class="absolute inset-0 w-full h-full object-cover hidden" alt="Uploaded Profile Image" />
+                        <span class="text-4xl font-bold text-white" id="initials">YN</span>
                     </div>
+                    <input type="file" id="image-upload" class="block mx-auto mt-4" accept="image/*" />
                     <h2 class="text-2xl mt-4 section-title" id="name" contenteditable="true">YOUR NAME</h2>
                 </div>
                 <div class="mb-8">
@@ -40,6 +41,7 @@
                     </ul>
                     <button id="addSkillsBtn" class="text-green-500 font-semibold">+</button>
                 </div>
+                <!-- Other Sidebar Sections -->
                 <div class="mb-8">
                     <h3 class="text-sm font-bold mb-2 section-title">LANGUAGES</h3>
                     <ul class="text-xs" id="languages">
@@ -56,13 +58,6 @@
                     </ul>
                     <button id="addSocialBtn" class="text-green-500 font-semibold">+</button>
                 </div>
-                <div class="mb-8">
-                    <h3 class="text-sm font-bold mb-2 section-title">EXTRA INFO</h3>
-                    <ul class="text-xs" id="extraInfo">
-                        <li contenteditable="true">Extra info can include anything relevant that's not already covered.</li>
-                    </ul>
-                    <button id="addExtraInfoBtn" class="text-green-500 font-semibold">+</button>
-                </div>
                 <div>
                     <h3 class="text-sm font-bold mb-2 section-title">REFERENCES</h3>
                     <ul class="text-xs" id="references">
@@ -73,7 +68,7 @@
             </div>
 
             <!-- Right Content -->
-            <div class="p-8 w-2/3 text-gray-700">
+            <div class="p-8 w-full lg:w-2/3 text-gray-700">
                 <div class="mb-8">
                     <h2 class="text-3xl font-bold section-title" id="resumeName" contenteditable="true">YOUR NAME</h2>
                     <h3 class="text-xl font-semibold" id="jobTitle" contenteditable="true">Job Title</h3>
@@ -81,7 +76,7 @@
                 </div>
                 <div class="mb-8">
                     <h3 class="text-lg font-bold mb-4 section-title">SUMMARY</h3>
-                    <p class="text-sm" id="summary" contenteditable="true">Brief summary of experience, qualifications, and skills. This should be a few lines long and give an overview of your professional capabilities.</p>
+                    <p class="text-sm" id="summary" contenteditable="true">Brief summary of experience, qualifications, and skills.</p>
                 </div>
                 <div class="mb-8">
                     <div class="experience-title flex justify-between items-center">
@@ -93,7 +88,6 @@
                         <p class="text-xs text-gray-500" contenteditable="true">Jan 2024 - Present | City, ST</p>
                         <ul class="list-disc pl-6 text-xs" contenteditable="true">
                             <li>Key achievements, tasks, and projects.</li>
-                            <li>Important keywords taken from job advert.</li>
                         </ul>
                     </div>
                 </div>
@@ -110,8 +104,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
     <script src="script.js"></script>
+    <script src="jspdf.umd.min.js"></script>
+    <script src="html2pdf.bundle.min.js"></script>
 </body>
 </html>

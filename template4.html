@@ -7,263 +7,183 @@
     <title>Developer Resume Template</title>
     <meta name="description" content="Responsive Resume Template">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
     <link href="output.css" rel="stylesheet">
 </head>
 
 <body class="bg-blue-100 min-h-screen">
-    <!-- Navbar with Editing Tools -->
     <nav class="bg-blue-500 shadow-lg p-4 flex justify-between items-center">
         <div class="flex items-center space-x-4">
             <a href="index.html" class="text-xl font-semibold text-gray-800">CV Start</a>
         </div>
         <div class="flex space-x-4">
-            <button class="flex items-center p-2 hover:bg-gray-200 rounded" id="saveButton">
+            <button id="saveButton" class="flex items-center p-2 hover:bg-gray-200 rounded">
                 <img src="assets/images/save-icon.png" alt="Save" class="w-5 h-5 mr-2">Save
             </button>
-            <button class="flex items-center p-2 hover:bg-gray-200 rounded" id="downloadButton">
+            <button id="downloadButton" class="flex items-center p-2 hover:bg-gray-200 rounded">
                 <img src="assets/images/download-icon.png" alt="Download" class="w-5 h-5 mr-2">Download
             </button>
         </div>
     </nav>
 
-    <article class="max-w-5xl mx-auto p-4">
-        <div class="bg-white shadow-lg">
-            <!-- Header Section -->
-            <header class="bg-gray-800 text-white p-8">
-                <div class="flex flex-col md:flex-row gap-6">
-                    <div class="flex-grow">
-                        <div class="flex flex-col md:flex-row justify-between">
-                            <div>
-                                <h1 class="text-3xl font-bold uppercase mb-2" contenteditable="true" id="name">Steve Doe
-                                </h1>
-                                <div class="text-xl mb-4" contenteditable="true" id="jobTitle">Full Stack Developer
+    <main>
+        <article class="max-w-5xl mx-auto p-4">
+            <div class="bg-white shadow-lg">
+                <!-- Header Section -->
+                <header class="bg-gray-800 text-white p-8">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-grow">
+                            <div class="flex flex-col md:flex-row justify-between">
+                                <div>
+                                    <h1 class="text-3xl font-bold uppercase mb-2" contenteditable="true" id="name">Steve Doe</h1>
+                                    <div class="text-xl mb-4" contenteditable="true" id="jobTitle">Full Stack Developer</div>
+                                    <ul class="space-y-2">
+                                        <li>
+                                            <a href="#" class="hover:text-gray-300" contenteditable="true" id="contactInfo">
+                                                <i class="far fa-envelope mr-2"></i> Steve.Doe@website.com
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <ul class="space-y-2">
-                                    <li>
-                                        <a href="#" class="hover:text-gray-300" contenteditable="true" id="contactInfo">
-                                            <i class="far fa-envelope mr-2"></i>
-                                            Steve.Doe@website.com
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="mt-4 md:mt-0">
-                                <ul class="space-y-2">
-                                    <li>
-                                        <a href="#" class="hover:text-gray-300" contenteditable="true" id="resumeName">
-                                            <i class="fab fa-linkedin-in w-6"></i>
-                                            linkedin.com/in/stevedoe
-                                        </a>
-                                    </li>
-                                </ul>
+                                <div class="mt-4 md:mt-0">
+                                    <ul class="space-y-2">
+                                        <li>
+                                            <a href="#" class="hover:text-gray-300" contenteditable="true" id="resumeName">
+                                                <i class="fab fa-linkedin-in w-6"></i> linkedin.com/in/stevedoe
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </header>
+                </header>
 
-            <!-- Main Content -->
-            <div class="p-8">
-                <!-- Career Summary -->
-                <section class="mb-8">
-                    <h2 class="text-2xl font-bold uppercase border-b-2 border-gray-300 pb-2 mb-4">Career Summary</h2>
-                    <p class="text-gray-600" contenteditable="true" id="summary">
-                        Summarize your career here. Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque
-                        penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
-                        nec, pellentesque eu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    </p>
-                </section>
+                <!-- Main Content -->
+                <div class="p-8">
+                    <!-- Career Summary -->
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-bold uppercase border-b-2 border-gray-300 pb-2 mb-4">Career Summary</h2>
+                        <p class="text-gray-600" contenteditable="true" id="summary">
+                            Summarize your career here. Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque
+                            penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
+                            nec, pellentesque eu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        </p>
+                    </section>
 
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    <!-- Main Column -->
-                    <div class="lg:col-span-2">
-                        <!-- Work Experience -->
-                        <section class="mb-8">
-                            <h2 class="text-2xl font-bold uppercase border-b-2 border-gray-300 pb-2 mb-4">Work
-                                Experience</h2>
-                            <div id="experience1">
-                                <div class="mb-6 relative pl-4 border-l-2 border-gray-300">
-                                    <div class="mb-2">
-                                        <div class="flex flex-col md:flex-row justify-between">
-                                            <h3 class="text-xl font-bold" contenteditable="true">Lead Developer</h3>
-                                            <div class="text-gray-600" contenteditable="true">Startup Hub</div>
-                                            <span class="delete-btn text-red-500 cursor-pointer">✕</span>
-                                        </div>
-                                        <div class="text-gray-500" contenteditable="true">2023 - Present</div>
-                                    </div>
-                                    <div class="text-gray-600" contenteditable="true">
-                                        <p class="mb-2">Role description goes here ipsum dolor sit amet, consectetuer
-                                            adipiscing elit.</p>
-                                        <h4 class="font-bold mt-4">Achievements:</h4>
-                                        <ul class="list-disc pl-5 mb-4">
-                                            <li contenteditable="true">Lorem ipsum dolor sit amet</li>
-                                            <li contenteditable="true">At vero eos et accusamus</li>
-                                            <li contenteditable="true">Blanditiis praesentium voluptatum</li>
-                                        </ul>
-                                        <h4 class="font-bold">Technologies used:</h4>
-                                        <div class="flex flex-wrap gap-2 mt-2">
-                                            <span class="bg-gray-200 px-3 py-1 rounded-full text-sm">Angular</span>
-                                            <span class="bg-gray-200 px-3 py-1 rounded-full text-sm">Python</span>
-                                            <span class="bg-gray-200 px-3 py-1 rounded-full text-sm">jQuery</span>
-                                            <span class="bg-gray-200 px-3 py-1 rounded-full text-sm">Webpack</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <button id="addExperienceButton" class="text-green-500 font-semibold">+</button>
-                        </section>
-
-                        <!-- Education -->
-                        <section class="mb-8">
-                            <h2 class="text-2xl font-bold uppercase border-b-2 border-gray-300 pb-2 mb-4">Education</h2>
-                            <div id="education1">
-                                <div class="mb-6 relative pl-4 border-l-2 border-gray-300">
-                                    <div class="mb-2">
-                                        <div class="flex flex-col md:flex-row justify-between">
-                                            <h3 class="text-xl font-bold" contenteditable="true">MSc in Computer Science
-                                            </h3>
-                                            <div class="text-gray-600" contenteditable="true">University College London
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        <!-- Main Column -->
+                        <div class="lg:col-span-2">
+                            <!-- Work Experience -->
+                            <section class="mb-8">
+                                <h2 class="text-2xl font-bold uppercase border-b-2 border-gray-300 pb-2 mb-4">Work Experience</h2>
+                                <div id="experience1">
+                                    <div class="mb-6 relative pl-4 border-l-2 border-gray-300">
+                                        <div class="mb-2">
+                                            <div class="flex flex-col md:flex-row justify-between">
+                                                <h3 class="text-xl font-bold" contenteditable="true">Lead Developer</h3>
+                                                <div class="text-gray-600" contenteditable="true">Startup Hub</div>
+                                                <span class="delete-btn text-red-500 cursor-pointer">✕</span>
                                             </div>
-                                            <span class="delete-btn text-red-500 cursor-pointer">✕</span>
+                                            <div class="text-gray-500" contenteditable="true">2023 - Present</div>
                                         </div>
-                                        <div class="text-gray-500" contenteditable="true">2013 - 2014</div>
-                                    </div>
-                                    <div class="text-gray-600" contenteditable="true">
-                                        <p class="mb-2">Description of the MSc program goes here.</p>
-                                        <h4 class="font-bold mt-4">Achievements:</h4>
-                                        <ul class="list-disc pl-5 mb-4">
-                                            <li contenteditable="true">Completed thesis on AI technologies</li>
-                                            <li contenteditable="true">Achieved distinction in final year project</li>
-                                            <li contenteditable="true">Led student research group</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="mb-6 relative pl-4 border-l-2 border-gray-300">
-                                    <div class="mb-2">
-                                        <div class="flex flex-col md:flex-row justify-between">
-                                            <h3 class="text-xl font-bold" contenteditable="true">BSc Maths and Physics
-                                            </h3>
-                                            <div class="text-gray-600" contenteditable="true">Imperial College London
+                                        <div class="text-gray-600" contenteditable="true">
+                                            <p class="mb-2">Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                            <h4 class="font-bold mt-4">Achievements:</h4>
+                                            <ul class="list-disc pl-5 mb-4">
+                                                <li contenteditable="true">Lorem ipsum dolor sit amet</li>
+                                                <li contenteditable="true">At vero eos et accusamus</li>
+                                                <li contenteditable="true">Blanditiis praesentium voluptatum</li>
+                                            </ul>
+                                            <h4 class="font-bold">Technologies used:</h4>
+                                            <div class="flex flex-wrap gap-2 mt-2">
+                                                <span class="bg-gray-200 px-3 py-1 rounded-full text-sm">Angular</span>
+                                                <span class="bg-gray-200 px-3 py-1 rounded-full text-sm">Python</span>
+                                                <span class="bg-gray-200 px-3 py-1 rounded-full text-sm">jQuery</span>
+                                                <span class="bg-gray-200 px-3 py-1 rounded-full text-sm">Webpack</span>
                                             </div>
-                                            <span class="delete-btn text-red-500 cursor-pointer">✕</span>
                                         </div>
-                                        <div class="text-gray-500" contenteditable="true">2010 - 2013</div>
-                                    </div>
-                                    <div class="text-gray-600" contenteditable="true">
-                                        <p class="mb-2">Description of the BSc program goes here.</p>
-                                        <h4 class="font-bold mt-4">Achievements:</h4>
-                                        <ul class="list-disc pl-5 mb-4">
-                                            <li contenteditable="true">Graduated with honors</li>
-                                            <li contenteditable="true">Participated in international research
-                                                collaboration</li>
-                                            <li contenteditable="true">Won undergraduate research award</li>
-                                        </ul>
                                     </div>
                                 </div>
-                            </div>
-                            <button id="addEducationButton" class="text-green-500 font-semibold">+</button>
-                        </section>
-                    </div>
+                                <button id="addExperienceButton" class="text-green-500 font-semibold">+</button>
+                            </section>
 
-                    <!-- Sidebar -->
-                    <div>
-                        <!-- Skills -->
-                        <section class="mb-8">
-                            <h2 class="text-2xl font-bold uppercase border-b-2 border-gray-300 pb-2 mb-4">Skills & Tools
-                            </h2>
+                            <!-- Education -->
+                            <section class="mb-8">
+                                <h2 class="text-2xl font-bold uppercase border-b-2 border-gray-300 pb-2 mb-4">Education</h2>
+                                <div id="education1">
+                                    <div class="mb-6 relative pl-4 border-l-2 border-gray-300">
+                                        <div class="mb-2">
+                                            <div class="flex flex-col md:flex-row justify-between">
+                                                <h3 class="text-xl font-bold" contenteditable="true">MSc in Computer Science</h3>
+                                                <div class="text-gray-600" contenteditable="true">University College London</div>
+                                                <span class="delete-btn text-red-500 cursor-pointer">✕</span>
+                                            </div>
+                                            <div class="text-gray-500" contenteditable="true">2013 - 2014</div>
+                                        </div>
+                                        <div class="text-gray-600" contenteditable="true">
+                                            <p class="mb-2">Description of the MSc program goes here.</p>
+                                            <h4 class="font-bold mt-4">Achievements:</h4>
+                                            <ul class="list-disc pl-5 mb-4">
+                                                <li contenteditable="true">Completed thesis on AI technologies</li>
+                                                <li contenteditable="true">Achieved distinction in final year project</li>
+                                                <li contenteditable="true">Led student research group</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button id="addEducationButton" class="text-green-500 font-semibold">+</button>
+                            </section>
+                        </div>
+
+                        <!-- Sidebar -->
+                        <div>
                             <!-- Skills -->
-                            <div id="skills" class="space-y-2">
-                                <div
-                                    class="flex justify-between bg-blue-100 text-blue-800 px-3 py-2 rounded-md text-sm font-medium transform transition duration-200 hover:bg-blue-200 hover:-translate-y-1">
-                                    <span contenteditable="true">Angular</span>
-                                    <span
-                                        class="text-gray-500 cursor-pointer font-semibold hover:text-red-500 delete-btn">✕</span>
+                            <section class="mb-8">
+                                <h2 class="text-2xl font-bold uppercase border-b-2 border-gray-300 pb-2 mb-4">Skills & Tools</h2>
+                                <div id="skills" class="space-y-2">
+                                    <div class="flex justify-between bg-blue-100 text-blue-800 px-3 py-2 rounded-md text-sm font-medium transform transition duration-200 hover:bg-blue-200 hover:-translate-y-1">
+                                        <span contenteditable="true">Angular</span>
+                                        <span class="text-gray-500 cursor-pointer font-semibold hover:text-red-500 delete-btn">✕</span>
+                                    </div>
+                                    <div class="flex justify-between bg-blue-100 text-blue-800 px-3 py-2 rounded-md text-sm font-medium transform transition duration-200 hover:bg-blue-200 hover:-translate-y-1">
+                                        <span contenteditable="true">React</span>
+                                        <span class="text-gray-500 cursor-pointer font-semibold hover:text-red-500 delete-btn">✕</span>
+                                    </div>
                                 </div>
-                                <div
-                                    class="flex justify-between bg-blue-100 text-blue-800 px-3 py-2 rounded-md text-sm font-medium transform transition duration-200 hover:bg-blue-200 hover:-translate-y-1">
-                                    <span contenteditable="true">React</span>
-                                    <span
-                                        class="text-gray-500 cursor-pointer font-semibold hover:text-red-500 delete-btn">✕</span>
-                                </div>
-                            </div>
-                            <button id="addSkillsBtn2" class="text-green-500 font-semibold">+</button>
-                        </section>
+                                <button id="addSkillsBtn2" class="text-green-500 font-semibold">+</button>
+                            </section>
 
-                        <!-- Languages -->
-                        <section class="mb-8">
-                            <h2 class="text-2xl font-bold uppercase border-b-2 border-gray-300 pb-2 mb-4">Languages</h2>
-                            <ul id="languages" class="space-y-2">
-                                <li contenteditable="true">English (Fluent)</li>
-                                <li contenteditable="true">Spanish (Intermediate)</li>
-                                <li contenteditable="true">French (Beginner)</li>
-                            </ul>
-                            <button id="addLanguagesBtn" class="text-green-500 font-semibold">+</button>
-                        </section>
+                            <!-- Languages -->
+                            <section class="mb-8">
+                                <h2 class="text-2xl font-bold uppercase border-b-2 border-gray-300 pb-2 mb-4">Languages</h2>
+                                <ul id="languages" class="space-y-2">
+                                    <li contenteditable="true">English (Fluent)</li>
+                                    <li contenteditable="true">Spanish (Intermediate)</li>
+                                    <li contenteditable="true">French (Beginner)</li>
+                                </ul>
+                                <button id="addLanguagesBtn" class="text-green-500 font-semibold">+</button>
+                            </section>
 
-                        <!-- Social -->
-                        <section class="mb-8">
-                            <h2 class="text-2xl font-bold uppercase border-b-2 border-gray-300 pb-2 mb-4">Social</h2>
-                            <ul id="social" class="space-y-2">
-                                <li contenteditable="true">
-                                    <a href="#" class="hover:text-gray-300">
-                                        <i class="fab fa-linkedin-in w-6"></i>
-                                        linkedin.com/in/stevedoe
-                                    </a>
-                                </li>
-                                <li contenteditable="true">
-                                    <a href="#" class="hover:text-gray-300">
-                                        <i class="fab fa-github-alt w-6"></i>
-                                        github.com/username
-                                    </a>
-                                </li>
-                                <li contenteditable="true">
-                                    <a href="#" class="hover:text-gray-300">
-                                        <i class="fab fa-codepen w-6"></i>
-                                        codepen.io/username
-                                    </a>
-                                </li>
-                                <li contenteditable="true">
-                                    <a href="#" class="hover:text-gray-300">
-                                        <i class="fas fa-globe w-6"></i>
-                                        yourwebsite.com
-                                    </a>
-                                </li>
-                            </ul>
-                            <button id="addSocialBtn" class="text-green-500 font-semibold">+</button>
-                        </section>
-
-                        <!-- Extra Info -->
-                        <section class="mb-8">
-                            <h2 class="text-2xl font-bold uppercase border-b-2 border-gray-300 pb-2 mb-4">Extra Info
-                            </h2>
-                            <ul id="extraInfo" class="space-y-2">
-                                <li contenteditable="true">Additional information</li>
-                            </ul>
-                            <button id="addExtraInfoBtn" class="text-green-500 font-semibold">+</button>
-                        </section>
-
-                        <!-- References -->
-                        <section>
-                            <h2 class="text-2xl font-bold uppercase border-b-2 border-gray-300 pb-2 mb-4">References
-                            </h2>
-                            <ul id="references" class="space-y-2">
-                                <li contenteditable="true">Reference name - Contact info</li>
-                            </ul>
-                            <button id="addReferencesBtn" class="text-green-500 font-semibold">+</button>
-                        </section>
+                            <!-- Interests -->
+                            <section class="mb-8">
+                                <h2 class="text-2xl font-bold uppercase border-b-2 border-gray-300 pb-2 mb-4">Interests</h2>
+                                <ul id="interests" class="space-y-2">
+                                    <li contenteditable="true">Technology</li>
+                                    <li contenteditable="true">Coding</li>
+                                    <li contenteditable="true">Machine Learning</li>
+                                </ul>
+                                <button id="addInterestsBtn" class="text-green-500 font-semibold">+</button>
+                            </section>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Footer -->
-        <footer class="text-center py-4 text-gray-600">
-            <small>Designed for developers</small>
-        </footer>
-    </article>
-
+        </article>
+    </main>
+        <!-- JavaScript File -->
     <script src="script.js"></script>
+    <script src="jspdf.umd.min.js"></script>
+    <script src="html2pdf.bundle.min.js"></script>
 </body>
 
 </html>

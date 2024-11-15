@@ -101,7 +101,6 @@ function attachEventListeners() {
         }
     });
 
-    // Save Button
     if (saveButton) {
         saveButton.addEventListener('click', () => {
             saveResume();
@@ -146,36 +145,28 @@ function loadSavedResume() {
       }
   });
 
-  // Add delete buttons for skills and languages with event listeners
   ['skills', 'languages'].forEach(sectionId => {
       const section = document.getElementById(sectionId);
       if (section) {
           section.querySelectorAll('li').forEach(item => {
-              // Remove any existing delete buttons first to prevent duplicates
               const existingDeleteBtn = item.querySelector('.delete-btn');
               if (existingDeleteBtn) {
                   existingDeleteBtn.remove();
               }
-
-              // Create and append new delete button
               const deleteBtn = createDeleteButton(item);
               item.appendChild(deleteBtn);
           });
       }
   });
 
-  // Add delete buttons for experience and education sections
   ['experience1', 'education1'].forEach(sectionId => {
       const section = document.getElementById(sectionId);
       if (section) {
           section.querySelectorAll('> div').forEach(item => {
-              // Remove any existing delete buttons first
               const existingDeleteBtn = item.querySelector('.delete-btn');
               if (existingDeleteBtn) {
                   existingDeleteBtn.remove();
               }
-
-              // Create and append new delete button
               const deleteBtn = createDeleteButton(item);
               const header = item.querySelector('.section-header') || item.querySelector('.flex') || item;
               header.appendChild(deleteBtn);
@@ -274,7 +265,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-//just for template 1//
 
     document.getElementById('addSkillsBtn').addEventListener('click', function() {
         const skillItem = document.createElement('li');
@@ -284,10 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-//just for template 4 //
-
 document.addEventListener("DOMContentLoaded", function () {
-    // Add new experience
     document.getElementById("addExperienceBtn").addEventListener("click", function () {
         const experienceContainer = document.getElementById("experienceContainer");
         const newExperience = document.createElement("div");
@@ -311,7 +298,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Add new skill
     document.querySelectorAll(".addSkillBtn").forEach(function (button) {
         button.addEventListener("click", function (event) {
             const container = event.target.closest("section").querySelector(".skillsContainer");
@@ -328,4 +314,80 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const downloadButtons = document.querySelectorAll('#downloadButton');  
+    downloadButtons.forEach((downloadButton) => {
+        downloadButton.addEventListener("click", (event) => {
+            try {
+                const cvBody = document.querySelector('main');  
+                const CV = {
+                    margin: [0, 0, 0, 0],  
+                    filename: 'resume.pdf',
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { 
+                        scale: 4,  
+                        useCORS: true,  
+                        logging: false,
+                        letterRendering: true,
+                    },
+                    jsPDF: { 
+                        unit: 'mm', 
+                        format: 'a4', 
+                        orientation: 'portrait' 
+                    }
+                };
+
+                const images = cvBody.getElementsByTagName('img');
+                const imagePromises = Array.from(images).map(img => {
+                    return new Promise((resolve) => {
+                        if (img.complete) {
+                            resolve();
+                        } else {
+                            img.onload = resolve;
+                            img.onerror = resolve;
+                        }
+                    });
+                });
+                Promise.all(imagePromises).then(() => {
+                    html2pdf().set(CV).from(cvBody).save();
+                });
+            } catch (error) {
+                console.error("PDF generation error:", error);
+                alert("There was an error generating the PDF. Please try again.");
+            }
+        });
+    });
+
+    document.getElementById('imageInput').addEventListener('change', previewImage);
+});
+
+function previewImage(event) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function () {
+        const imagePreview = document.getElementById('imagePreview');
+        imagePreview.src = reader.result;  
+        imagePreview.style.display = 'block'; 
+    };
+
+    if (file) {
+        reader.readAsDataURL(file); 
+    }
+}
+
+document.getElementById('image-upload').addEventListener('change', function (event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            const uploadedImage = document.getElementById('uploaded-image');
+            uploadedImage.src = e.target.result;
+            uploadedImage.classList.remove('hidden');
+        };
+        reader.readAsDataURL(file);
+    }
 });

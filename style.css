@@ -33,3 +33,13 @@
   .plus-sign:hover {
     color: darkgreen !important;
   }
+
+
+
+main {
+    max-width: 210mm; 
+    max-height: 297mm; 
+    margin: 0 auto;
+    padding: 0; 
+    box-sizing: border-box;
+}
